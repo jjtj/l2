@@ -8,12 +8,16 @@ if __name__ == "__main__":
         print "Usage: level-gen.py [input-svg-file] [output-folder]"
         exit(1)
         
-    inputFn = sys.argv[1]
-    outputFolder = sys.argv[2]
+    inputFn = os.path.abspath(sys.argv[1])
+    outputFolder = os.path.abspath(sys.argv[2])
     
     print 'Level generator:'
+    print '----------------'
     print 'Input Svg File: ' + inputFn
     print 'Output Folder: ' + outputFolder
+    
+    utils.ensureDir(outputFolder)
+    
     
     
     
