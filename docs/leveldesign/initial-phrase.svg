@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="800"
+   height="3733"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="initial-phrase.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.2164479"
+     inkscape:cx="400"
+     inkscape:cy="1866.5"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer2"
+     showgrid="false"
+     inkscape:window-width="1680"
+     inkscape:window-height="987"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,2680.6378)"
+     style="display:inline">
+    <rect
+       style="opacity:0.5;fill:#ff00ff;display:inline"
+       id="level-back"
+       width="800"
+       height="798.98987"
+       x="0"
+       y="-2680.2507"
+       inkscape:label="#rect2986" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="1st level"
+     transform="translate(0,-267)"
+     style="display:inline">
+    <path
+       sodipodi:type="arc"
+       style="fill:#782144;fill-opacity:1;stroke:none"
+       id="level-4-check-point-0"
+       sodipodi:cx="411.13208"
+       sodipodi:cy="2491.8423"
+       sodipodi:rx="50.507626"
+       sodipodi:ry="50.507626"
+       d="m 461.63971,2491.8423 a 50.507626,50.507626 0 1 1 -101.01526,0 50.507626,50.507626 0 1 1 101.01526,0 z"
+       transform="matrix(0.83999999,0,0,0.83999999,60.750462,528.04299)"
+       inkscape:label="#path3845" />
+    <path
+       transform="matrix(0.87500001,0,0,0.87500001,-250.92899,1017.3259)"
+       d="m 459.99999,1270 a 45.714287,45.714287 0 1 1 -91.42857,0 45.714287,45.714287 0 1 1 91.42857,0 z"
+       sodipodi:ry="45.714287"
+       sodipodi:rx="45.714287"
+       sodipodi:cy="1270"
+       sodipodi:cx="414.28571"
+       id="level-3-check-point-0"
+       style="fill:#ab37c8;fill-opacity:1;stroke:none"
+       sodipodi:type="arc"
+       inkscape:label="#path3816" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#ab37c8;fill-opacity:1;stroke:none"
+       id="level-3-check-point-1"
+       sodipodi:cx="414.28571"
+       sodipodi:cy="1270"
+       sodipodi:rx="45.714287"
+       sodipodi:ry="45.714287"
+       d="m 459.99999,1270 a 45.714287,45.714287 0 1 1 -91.42857,0 45.714287,45.714287 0 1 1 91.42857,0 z"
+       transform="matrix(0.87500003,0,0,0.87500003,324.78601,1017.3259)"
+       inkscape:label="#path3826" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#7137c8;fill-opacity:1;stroke:none"
+       id="level-2-check-point-0"
+       sodipodi:cx="414.28571"
+       sodipodi:cy="1270"
+       sodipodi:rx="45.714287"
+       sodipodi:ry="45.714287"
+       d="m 459.99999,1270 a 45.714287,45.714287 0 1 1 -91.42857,0 45.714287,45.714287 0 1 1 91.42857,0 z"
+       transform="matrix(1.0091529,0,0,1.0091529,-17.934768,255.52317)"
+       inkscape:label="#path3801" />
+    <path
+       style="fill:#ff00ff;fill-opacity:0.75294118;stroke:none"
+       d="m 5e-5,1065.7189 0,588.5624 800,0 0,-588.5624 -800,0 z m 400,418.5624 c 29.19219,0 52.84375,23.6828 52.84375,52.875 0,29.1922 -23.65156,52.8437 -52.84375,52.8437 -29.19219,0 -52.875,-23.6515 -52.875,-52.8437 0,-29.1922 23.68281,-52.875 52.875,-52.875 z"
+       id="level-2-terrain"
+       inkscape:connector-curvature="0"
+       inkscape:label="#rect3798" />
+    <path
+       style="fill:#ff00ff;fill-opacity:0.75294118;stroke:none"
+       d="m 641.31255,355.71875 0,15.06268 -17.625,-1.027 0,-12.04392 -17.65625,-1.49382 -7.03125,218.25327 10.625,1.49381 c -64.62384,-7.33118 -141.65854,-13.07092 -224.75,-13.07092 -57.49061,0 -109.76609,3.08765 -155.96875,7.71807 l 4.84375,-0.65354 -24.15625,-115.42869 14.09375,-4.9794 -73.5625,-60.71754 -41.3125,78.76786 18.625,-2.02288 15.125,116.36232 C 55.624674,596.13211 4.9502192,613.33904 2.0313,615.08318 l -1.875,236.21022 -0.15625,0 0,20.69562 0,193.72978 800,0 0,-193.72978 0,-20.69562 0,-244.20838 c 0,0 -27.90659,-6.66448 -75.4375,-14.81371 l 12.46875,1.77391 0,-222.76585 -21.65625,-9.02516 0.5,12.54186 -14.625,-1.52494 -1,-13.0398 -24.6875,-1.99176 0,14.53362 -15.09375,0 0,-14.03568 -19.15625,-3.01876 z"
+       id="level-1-terrain"
+       inkscape:connector-curvature="0"
+       inkscape:label="#path2988" />
+    <path
+       style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#800066;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:9.30000019;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
+       d="m 190,948.93755 18.59375,0 0,-9.3125 -18.59375,0 z m 27.90625,0 18.59375,0 0,-9.3125 -18.59375,0 z m 27.90625,0 18.59375,0 0,-9.3125 -18.59375,0 z m 27.875,0 18.625,0 0,-9.3125 -18.625,0 z m 27.90625,0 18.59375,0 0,-9.3125 -18.59375,0 z m 27.90625,0 18.59375,0 0,-9.3125 -18.59375,0 z m 27.90625,0 18.59375,0 0,-9.3125 -18.59375,0 z m 27.90625,0 18.59375,0 0,-9.3125 -18.59375,0 z m 27.875,0 18.625,0 0,-9.3125 -18.625,0 z m 27.90625,0 18.59375,0 0,-9.3125 -18.59375,0 z m 27.90625,0 18.59375,0 0,-9.3125 -18.59375,0 z m 27.90625,0 18.59375,0 0,-9.3125 -18.59375,0 z m 27.90625,0 18.59375,0 0,-9.3125 -18.59375,0 z m 27.875,0 18.625,0 0,-9.3125 -18.625,0 z m 27.90625,0 18.59375,0 0,-9.3125 -18.59375,0 z m 27.90625,0 4.34375,0 0,-9.3125 -4.34375,0 z"
+       id="level-1-check-point-0"
+       inkscape:connector-curvature="0"
+       inkscape:label="#path3785"
+       isLine="1" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#800066;fill-opacity:1;stroke:none;font-family:CrashLanding BB;-inkscape-font-specification:CrashLanding BB"
+       x="261.42859"
+       y="991.43311"
+       id="level-1-title"
+       sodipodi:linespacing="125%"
+       inkscape:label="#text3791"><tspan
+         sodipodi:role="line"
+         id="tspan3793"
+         x="261.42859"
+         y="991.43311">1st level - dig to here</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="level-2-title"
+       y="1627.1473"
+       x="258.57144"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#7137c8;fill-opacity:1;stroke:none;font-family:CrashLanding BB;-inkscape-font-specification:CrashLanding BB"
+       xml:space="preserve"
+       inkscape:label="#text3807"><tspan
+         y="1627.1473"
+         x="258.57144"
+         id="tspan3809"
+         sodipodi:role="line">2nd level - MEET the ball</tspan></text>
+    <path
+       style="fill:#ff00ff;fill-opacity:0.75294118;stroke:none"
+       d="m 0,1652.875 0,588.5626 800,0 0,-588.5626 -800,0 z m 111.40625,428.5626 c 26.03628,0 47.15625,21.0886 47.15625,47.125 0,26.0362 -21.11997,47.1562 -47.15625,47.1562 -26.036282,0 -47.125,-21.12 -47.125,-47.1562 0,-26.0364 21.088718,-47.125 47.125,-47.125 z m 575.71875,0 c 26.03628,0 47.15625,21.0887 47.15625,47.125 0,26.0362 -21.11997,47.1562 -47.15625,47.1562 -26.03628,0 -47.125,-21.12 -47.125,-47.1562 0,-26.0363 21.08872,-47.125 47.125,-47.125 z"
+       id="level-3-terrain"
+       inkscape:connector-curvature="0"
+       inkscape:label="#path3811" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#c4b7c8;fill-opacity:1;stroke:none;font-family:CrashLanding BB;-inkscape-font-specification:CrashLanding BB"
+       x="285.71429"
+       y="2204.2903"
+       id="level-3-title"
+       sodipodi:linespacing="125%"
+       inkscape:label="#text3828"><tspan
+         sodipodi:role="line"
+         id="tspan3830"
+         x="285.71429"
+         y="2204.2903">3rd level - TWO Balls</tspan></text>
+    <path
+       style="fill:#ff00ff;fill-opacity:0.75294118;stroke:none"
+       d="m 0,2236.75 0,274.5313 c 138.07522,-37.8369 472.55196,-105.6642 800,9.125 l 0,-283.6563 -800,0 z m 455.75,358.1876 c -2.16239,0.01 -4.4113,0.021 -6.59375,0.031 4.64841,7.6414 7.28125,16.6207 7.28125,26.2188 0,27.8945 -22.60541,50.5 -50.5,50.5 -27.89459,0 -50.5,-22.6055 -50.5,-50.5 0,-8.8716 2.2955,-17.192 6.3125,-24.4376 -101.99594,3.5992 -222.03623,12.888 -361.75,30.9376 l 0,197.625 800,0 0,-200.4688 c -54.85501,-12.4028 -165.26671,-30.3373 -344.25,-29.9062 z"
+       id="level-4-terrain"
+       inkscape:connector-curvature="0"
+       inkscape:label="#path3832" />
+    <text
+       sodipodi:linespacing="125%"
+       id="level-4-title"
+       y="2715.4272"
+       x="310.96811"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#c4b7c8;fill-opacity:1;stroke:none;font-family:CrashLanding BB;-inkscape-font-specification:CrashLanding BB"
+       xml:space="preserve"
+       inkscape:label="#text3847"><tspan
+         y="2715.4272"
+         x="310.96811"
+         id="tspan3849"
+         sodipodi:role="line">4th level - cross</tspan></text>
+    <path
+       style="fill:#ff00ff;fill-opacity:0.75294118;stroke:none"
+       d="m 0,2824.6563 0,162.0313 0,15.0937 800,139.875 0,-33.3437 0,-121.625 0,-162.0313 -800,0 z m 0,237.0625 0,37.4688 0,116.4062 0,90.4688 0,107.1562 795.8125,0 -73.25,-32.3438 c -7.77021,8.656 -19.05068,14.0938 -31.59375,14.0938 -23.43146,0 -42.4375,-19.006 -42.4375,-42.4375 0,-1.4434 0.0779,-2.8751 0.21875,-4.2813 l -67.3125,-29.7187 c -7.51152,11.9366 -20.7975,19.875 -35.9375,19.875 -23.43146,0 -42.4375,-19.006 -42.4375,-42.4375 0,-3.943 0.55556,-7.7521 1.5625,-11.375 l -67.90625,-29.9688 c -7.35037,12.6404 -21.0169,21.1563 -36.6875,21.1563 -23.43146,0 -42.40625,-19.006 -42.40625,-42.4375 0,-4.4631 0.69222,-8.7712 1.96875,-12.8125 l -68.5,-30.25 c -7.38363,12.4692 -20.95774,20.8437 -36.5,20.8437 -23.43146,0 -42.4375,-19.0062 -42.4375,-42.4374 0,-4.325 0.64046,-8.5076 1.84375,-12.4376 l -68.5625,-30.2812 c -7.42754,12.2828 -20.91059,20.5 -36.3125,20.5 -23.431456,0 -42.4375,-19.006 -42.4375,-42.4375 0,-4.2011 0.612128,-8.263 1.75,-12.0937 L 0,3061.7188 z m 278.5625,175.4375 c 43.3938,0 78.59375,35.1687 78.59375,78.5625 0,43.3938 -35.19995,78.5625 -78.59375,78.5625 -43.3938,0 -78.5625,-35.1687 -78.5625,-78.5625 0,-43.3938 35.1687,-78.5625 78.5625,-78.5625 z"
+       id="level-5-terrain"
+       inkscape:connector-curvature="0"
+       inkscape:label="#path3856" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#ff6600;fill-opacity:1;stroke:none"
+       id="level-5-check-point-0"
+       sodipodi:cx="158.57143"
+       sodipodi:cy="3044.2856"
+       sodipodi:rx="97.14286"
+       sodipodi:ry="97.14286"
+       d="m 255.71429,3044.2856 a 97.14286,97.14286 0 1 1 -194.285724,0 97.14286,97.14286 0 1 1 194.285724,0 z"
+       transform="matrix(0.6764706,0,0,0.6764706,171.30251,1256.349)"
+       inkscape:label="#path3876" />
+    <path
+       style="fill:#ff00ff;fill-opacity:0.75294118;stroke:none"
+       d="m 0,3411.4376 0,357.9062 c 85.655139,-22.8544 231.84215,-37.9062 397.84375,-37.9062 168.78395,0 317.14178,15.5613 402.15625,39.0624 l 0,-359.0624 -800,0 z m 800,450.9374 c -76.1979,21.064 -203.27683,35.7424 -350.34375,38.5626 -7.38141,20.2843 -26.8149,34.7812 -49.65625,34.7812 -22.8064,0 -42.24094,-14.4519 -49.65625,-34.6875 C 204.17321,3898.4645 77.380552,3884.1779 0,3863.5313 L 0,4000 l 800,0 0,-137.625 z"
+       id="level-6-terrain"
+       inkscape:connector-curvature="0"
+       inkscape:label="#path3881" />
+    <path
+       transform="matrix(0.41176473,0,0,0.41176473,334.70587,2629.3322)"
+       d="m 255.71429,3044.2856 a 97.14286,97.14286 0 1 1 -194.285724,0 97.14286,97.14286 0 1 1 194.285724,0 z"
+       sodipodi:ry="97.14286"
+       sodipodi:rx="97.14286"
+       sodipodi:cy="3044.2856"
+       sodipodi:cx="158.57143"
+       id="level-6-check-point-0"
+       style="fill:#aa8800;fill-opacity:1;stroke:none"
+       sodipodi:type="arc"
+       inkscape:label="#path3887" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#c4b7c8;fill-opacity:1;stroke:none;font-family:CrashLanding BB;-inkscape-font-specification:CrashLanding BB"
+       x="365.25381"
+       y="3383.9988"
+       id="level-5-title"
+       sodipodi:linespacing="125%"
+       inkscape:label="#text3889"><tspan
+         sodipodi:role="line"
+         id="tspan3891"
+         x="365.25381"
+         y="3383.9988">5th level - cross</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="level-6-title"
+       y="3972.5703"
+       x="310.96811"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffd5d5;fill-opacity:1;stroke:none;font-family:CrashLanding BB;-inkscape-font-specification:CrashLanding BB"
+       xml:space="preserve"
+       inkscape:label="#text3893"><tspan
+         y="3972.5703"
+         x="310.96811"
+         id="tspan3895"
+         sodipodi:role="line">6th level - FINAL</tspan></text>
+  </g>
+</svg>
