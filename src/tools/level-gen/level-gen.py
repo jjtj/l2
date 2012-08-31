@@ -60,19 +60,32 @@ def createLevel(lvlNum, objects):
             print 'Unexpected object: ' + objid
     
     return level
-        
-    
-def begin(inputfn, outputfolder):
-    objects = inkscape.queryAllObjects(inputFn)    
+
+def collectAndCreateLevels(inputFn):
+    objects = inkscape.queryAllObjects(inputFn)
     groups = groupLevelObjects(objects)
-    
+
     print 'Collect & creating level data...'
     levels = []
     for v in groups:
         lvl = createLevel(v, groups[v])
         levels.append(lvl)
+
+    levels.sort(key=lambda lvl: lvl['levelNum'])
+    for lvl in levels:
+        print lvl
+
+    return levels
+
+
     
-    print levels
+def begin(inputfn, outfolder):
+    levels = collectAndCreateLevels(inputfn)
+    for lvl in levels:
+        updateLevelCheckPoints(inputfn, lvl)
+        exportLevelTitle(inputfn, lvl, outfolder)
+        exportCheckPoint(inputfn, lvl, outfolder)
+
         
     
 if __name__ == "__main__":
