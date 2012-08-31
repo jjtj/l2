@@ -3,6 +3,22 @@ import os
 import utils
 import inkscape
 import re
+import xml.etree.ElementTree as ET
+
+
+def findElementById(tree, id):
+    root = tree.getroot()
+    root.findAll('//')
+
+def extractDocumentDimension(svgfn):
+    tree = ET.parse(svgfn)
+    root = tree.getroot()
+
+    w = int(root.attrib['width'])
+    h = int(root.attrib['height'])
+
+    return [w,h]
+
 
 def groupLevelObjects(objects):
     
@@ -60,19 +76,31 @@ def createLevel(lvlNum, objects):
             print 'Unexpected object: ' + objid
     
     return level
-        
-    
-def begin(inputfn, outputfolder):
-    objects = inkscape.queryAllObjects(inputFn)    
+
+def extractLevels(inputfn):
+    objects = inkscape.queryAllObjects(inputFn)
     groups = groupLevelObjects(objects)
-    
+
     print 'Collect & creating level data...'
     levels = []
     for v in groups:
         lvl = createLevel(v, groups[v])
         levels.append(lvl)
+
+    # Let's sort levels data
+    levels.sort(key=lambda lvl: lvl['levelNum'])
+
+    return levels
+
     
-    print levels
+def begin(inputfn, outputfolder):
+
+    dim = extractDocumentDimension(inputfn)
+    print 'Dimension: ' + str(dim)
+
+    world = dict(w=dim[0],  \
+                 h=dim[1])
+    world['level'] = extractLevels(inputfn)
         
     
 if __name__ == "__main__":
@@ -88,7 +116,7 @@ if __name__ == "__main__":
     print '----------------'
     print 'Input Svg File: ' + inputFn
     print 'Output Folder: ' + outputFolder
-    
+
     begin(inputFn, outputFolder)
     
     
