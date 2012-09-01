@@ -3,7 +3,21 @@ import os
 import utils
 import inkscape
 import re
-from xml.etree import ElementTree
+import xml.etree.ElementTree as ET
+
+
+def findElementById(tree, id):
+    root = tree.getroot()
+    root.findAll('//')
+
+def extractDocumentDimension(svgfn):
+    tree = ET.parse(svgfn)
+    root = tree.getroot()
+
+    w = int(root.attrib['width'])
+    h = int(root.attrib['height'])
+
+    return [w,h]
 
 def groupLevelObjects(objects):
     
@@ -62,6 +76,7 @@ def createLevel(lvlNum, objects):
     
     return level
 
+
 def collectAndCreateLevels(inputFn):
     objects = inkscape.queryAllObjects(inputFn)
     groups = groupLevelObjects(objects)
@@ -81,16 +96,15 @@ def collectAndCreateLevels(inputFn):
 def updateLevelCheckPoints(inputfn, lvl):
     pass
 
-    
-def begin(inputfn, outfolder):
-    levels = collectAndCreateLevels(inputfn)
-    for lvl in levels:
-        updateLevelCheckPoints(inputfn, lvl)
-        """
-        exportLevelTitle(inputfn, lvl, outfolder)
-        exportCheckPoint(inputfn, lvl, outfolder)
-        """
 
+def begin(inputfn, outputfolder):
+
+    dim = extractDocumentDimension(inputfn)
+    print 'Dimension: ' + str(dim)
+
+    world = dict(w=dim[0],  \
+                 h=dim[1])
+    world['level'] = collectAndCreateLevels(inputfn)
         
     
 if __name__ == "__main__":
@@ -106,7 +120,7 @@ if __name__ == "__main__":
     print '----------------'
     print 'Input Svg File: ' + inputFn
     print 'Output Folder: ' + outputFolder
-    
+
     begin(inputFn, outputFolder)
     
     

@@ -11,6 +11,8 @@
 *.la
 *.a
 
+/src/tools/level-gen/inkscape.pyc
+/src/tools/level-gen/inter.txt
 /src/tools/level-gen/.idea/.name
 /src/tools/level-gen/.idea/encodings.xml
 /src/tools/level-gen/.idea/inspectionProfiles/profiles_settings.xml
@@ -20,5 +22,3 @@
 /src/tools/level-gen/.idea/scopes/scope_settings.xml
 /src/tools/level-gen/.idea/vcs.xml
 /src/tools/level-gen/.idea/workspace.xml
-/src/tools/level-gen/inkscape.pyc
-/src/tools/level-gen/inter.txt
