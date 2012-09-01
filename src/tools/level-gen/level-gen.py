@@ -3,6 +3,7 @@ import os
 import utils
 import inkscape
 import re
+from xml.etree import ElementTree
 
 def groupLevelObjects(objects):
     
@@ -77,14 +78,18 @@ def collectAndCreateLevels(inputFn):
 
     return levels
 
+def updateLevelCheckPoints(inputfn, lvl):
+    pass
 
     
 def begin(inputfn, outfolder):
     levels = collectAndCreateLevels(inputfn)
     for lvl in levels:
         updateLevelCheckPoints(inputfn, lvl)
+        """
         exportLevelTitle(inputfn, lvl, outfolder)
         exportCheckPoint(inputfn, lvl, outfolder)
+        """
 
         
     
