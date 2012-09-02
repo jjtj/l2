@@ -2,13 +2,21 @@ import sys
 import os
 import utils
 import inkscape
+import terrain
 import re
+import json
 import xml.etree.ElementTree as ET
 
 
-def findElementById(tree, id):
-    root = tree.getroot()
-    root.findAll('//')
+def findElementById(root, id):
+    all = root.findall('.//*')
+    for el in all:
+        elid = el.get('id', None)
+        if elid == id:
+            return el
+
+    return None
+
 
 def extractDocumentDimension(svgfn):
     tree = ET.parse(svgfn)
@@ -77,8 +85,42 @@ def createLevel(lvlNum, objects):
     return level
 
 
-def collectAndCreateLevels(inputFn):
-    objects = inkscape.queryAllObjects(inputFn)
+def generateLevelCheckPoint(svgfn,
+                            root,
+                            lvl,
+                            worldSize,
+                            outfolder):
+    chkpts = lvl['checkPoints']
+    for c in chkpts:
+        cid = c['id']
+        el = findElementById(root, cid)
+
+        if el == None:
+            continue
+
+        isLine = el.get('isLine', '0')
+        c['isLine'] = (isLine == '1')
+
+        if c['isLine']:
+            # We just need a png file
+            fn = inkscape.exportObject(svgfn, cid, outfolder)
+            c['imgfile'] = fn
+        else:
+            terrainResult = terrain.createFromObject(svgfn, c, worldSize, outfolder)
+            c['imgfile'] = terrainResult['fn']
+            c['terrainjson'] = terrainResult['json']
+
+def generateLevelTitle(svgfn, root, lvl, outfolder):
+    t = lvl['title']
+    tid = t['id']
+
+    fn = inkscape.exportObject(svgfn, tid, outfolder)
+    t['imgfile'] = fn
+
+
+
+def collectAndCreateLevels(svgfn, worldsize, outfolder):
+    objects = inkscape.queryAllObjects(svgfn)
     groups = groupLevelObjects(objects)
 
     print 'Collect & creating level data...'
@@ -91,20 +133,92 @@ def collectAndCreateLevels(inputFn):
     for lvl in levels:
         print lvl
 
+    tree = ET.parse(svgfn)
+    root = tree.getroot()
+
+    for lvl in levels:
+        generateLevelCheckPoint(svgfn, root, lvl, worldsize, outfolder)
+        generateLevelTitle(svgfn, root, lvl, outfolder)
+
+    for lvl in levels:
+        print lvl
+
     return levels
+
+
+def createTerrainImage(svgfn, outfolder):
+    tree = ET.parse(svgfn)
+    root = tree.getroot()
+
+    parent_map = dict((c,p) for p in tree.getiterator() for c in p)
+
+    for el in root.getiterator():
+        id = el.get('id', '')
+        if isTerrain(id) == False:
+            style = el.get('style', '')
+            style = style + ";display:none;"
+            el.set('style', style)
+        else:
+            p = parent_map[el]
+            while p in parent_map:
+                style = p.get('style', '')
+                style = style.replace('display:none;', '')
+                p.set('style', style)
+
+                p = parent_map[p]
+
+
+    xmlstr = ET.tostring(root)
+
+    fn = os.path.abspath(os.path.join(outfolder, 'temp.svg'))
+    f = open(fn, "w")
+    f.write('<?xml version="1.0" encoding="UTF-8" standalone="no"?>')
+    f.write(xmlstr)
+    f.close()
+
+    return inkscape.exportPage(fn, outfolder)
+
+
+def generateWorldTerrain(svgfn, outfolder):
+    fn = createTerrainImage(svgfn, outfolder)
+    print 'Terrain image generated:' + fn
+
+    json = terrain.createTerrainFromImage(fn, outfolder, 'world-terrain')
+    print json
+    return json
+
 
 def updateLevelCheckPoints(inputfn, lvl):
     pass
 
 
-def begin(inputfn, outputfolder):
+def createSize(w,h):
+    return dict(w=w, h=h)
+
+
+def begin(inputfn, outfolder):
 
     dim = extractDocumentDimension(inputfn)
     print 'Dimension: ' + str(dim)
 
-    world = dict(w=dim[0],  \
-                 h=dim[1])
-    world['level'] = collectAndCreateLevels(inputfn)
+    world = dict()
+    world['dim'] = createSize(dim[0], dim[1])
+
+    world['level'] = collectAndCreateLevels(inputfn, world['dim'], outfolder)
+    world['wolrdTerrain'] = generateWorldTerrain(inputfn, outfolder)
+
+    print 'DUMP world file:'
+    jsonstr = json.dumps(world)
+
+    print jsonstr
+    jsonpath = os.path.abspath(os.path.join(outfolder, 'world.txt'))
+
+    file = open(jsonpath, "w")
+    file.write(jsonstr)
+    file.close()
+
+    print 'DONE...'
+
         
     
 if __name__ == "__main__":

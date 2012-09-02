@@ -1,0 +1,13 @@
+﻿body {
+}
+
+.flexbox-center-center {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	
+	display: -ms-flexbox;
+	-ms-flex-direction: row;
+	-ms-flex-align: center;
+	-ms-flex-pack: center;
+}

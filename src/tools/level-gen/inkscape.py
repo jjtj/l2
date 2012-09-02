@@ -1,4 +1,3 @@
-
 import os
 import sys
 
@@ -28,8 +27,29 @@ def queryAllObjects(svgfn):
     return entities
             
 
-def exportPage(svgfn):
-    pass
+def exportPage(svgfn, outfolder):
+
+    p = os.path.abspath(os.path.join(outfolder, 'export-page.png'))
+    cmd = _buildExportCmd(svgfn, "-e " + p)
+
+    print "Inkscape export page:"
+    print cmd
+
+    execute(cmd)
+
+    return p
+
+
+def exportObject(svgfn, id, outfolder):
+    outpath = os.path.abspath(os.path.join(outfolder, id + ".png"))
+    cmd = _buildExportCmd(svgfn, "-j -i " + id + " -e " + outpath)
+    print "Inkscape export object:"
+    print cmd
+
+    execute(cmd)
+
+    return outpath
+
 
 def execute(cmd):
     os.system(cmd)

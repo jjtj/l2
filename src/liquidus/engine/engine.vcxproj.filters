@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resources">
+      <UniqueIdentifier>075d2f2f-3fb1-4807-a96e-e33202f76868</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="terrain">
+      <UniqueIdentifier>{a96f0fb2-276b-4955-bc33-cbcb3d9db37e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{fcf44796-3ca6-45ce-8d5e-10dfc6643c05}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="terrain\Quad.cpp">
+      <Filter>terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="terrain\Terrain.cpp">
+      <Filter>terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="terrain\Deform.cpp">
+      <Filter>terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="terrain\TerrainCx.cpp">
+      <Filter>terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="terrain\QuadRawCx.cpp">
+      <Filter>terrain</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="terrain\Quad.h">
+      <Filter>terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="terrain\Terrain.h">
+      <Filter>terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="terrain\Deform.h">
+      <Filter>terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="terrain\DeformResult.h">
+      <Filter>terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="common\Circle.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\Point.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\FixedArray.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="terrain\TerrainCx.h">
+      <Filter>terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="terrain\QuadRawCx.h">
+      <Filter>terrain</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
