@@ -16,20 +16,16 @@ class Terrain
 public:
 	Terrain();
 
-	void ReplaceRoot(Quad* root) {
-		_deformQuads.ReplaceRoot(root);
-	}
+	void ReplaceRoot(Quad* root);
 
 	DeformResult BreakTerrain(const Circle& c, float amplification);
 
 	template<typename Func>
 	void Query(int x, int y, int w, int h, Func& func) {
-		_deformQuads.Walk([&](Quad* q, bool isSplitted, bool isDeleted) {
-			if(q->IsValidLeaf()) {
-				if(q->HasOverwrap(x,y,w,h)) {
-					func(q);
-				}
-			}
-		});
+		for(auto it = _leafs.begin(); it != _leafs.end(); ++it) {
+			auto q = it->second;
+			if(q->HasOverwrap(x,y,w,h))
+				func(q);
+		}
 	}
 };

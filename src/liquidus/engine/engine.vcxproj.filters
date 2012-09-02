@@ -59,5 +59,14 @@
     <ClInclude Include="terrain\QuadRawCx.h">
       <Filter>terrain</Filter>
     </ClInclude>
+    <ClInclude Include="common\AutoSync.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\Sync.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\SyncCriticalSection.h">
+      <Filter>common</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

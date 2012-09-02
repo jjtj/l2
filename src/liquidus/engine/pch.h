@@ -16,3 +16,5 @@
 #include <cmath>
 #include <intsafe.h>
 #include <collection.h>
+
+#define	NO_PARALLEL	1

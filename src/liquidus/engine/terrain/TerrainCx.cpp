@@ -1,11 +1,13 @@
 #include "pch.h"
 #include "TerrainCx.h"
+#include "../Common/SyncCriticalSection.h"
+#include "../Common/AutoSync.h"
 
 using namespace engine;
 
 
 TerrainCx::TerrainCx()
-{
+{	
 }
 
 void TerrainCx::Build(QuadRawCx^ root)
@@ -33,6 +35,8 @@ IVector<int>^ TerrainCx::Query(int x, int y, int w, int h)
 {
 	auto v = ref new Vector<int>();
 	_terrain.Query(x,y,w,h, [&](Quad* q) {
+		_ASSERTE(q->IsValidLeaf());
+
 		v->Append(q->X());
 		v->Append(q->Y());
 		v->Append(q->Width());

@@ -68,10 +68,17 @@ public:
 		func(this, this->IsSplitted(), this->IsDeleteMarked());
 		if(IsSplitted())
 		{
+#if defined(NO_PARALLEL)
+			int cnt = _quads->size();
+			for(int i=0;i<cnt;++i) {
+				_quads->at(i)->WalkQuad(func);
+			}
+#else
 			concurrency::parallel_for_each(_quads->begin(), _quads->end(),
 				[=](Quad* q) {
 					q->WalkQuad(func);
 			});
+#endif
 		}
 	}
 

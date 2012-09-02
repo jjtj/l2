@@ -199,9 +199,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="common\AutoSync.h" />
     <ClInclude Include="common\Circle.h" />
     <ClInclude Include="common\FixedArray.h" />
     <ClInclude Include="common\Point.h" />
+    <ClInclude Include="common\Sync.h" />
+    <ClInclude Include="common\SyncCriticalSection.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="terrain\DeformResult.h" />
     <ClInclude Include="terrain\Deform.h" />

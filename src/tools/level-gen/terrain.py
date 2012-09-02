@@ -7,7 +7,7 @@ import json
 
 __author__ = 'popop_000'
 
-MINIMUM_SIZE_THRESHOLD = 1
+MINIMUM_SIZE_THRESHOLD = 16
 
 class Quad:
     def __init__(self,x,y,w,h):
@@ -92,6 +92,9 @@ class Quad:
 
     def serialize(self):
 
+        if self.isDeleteMarked:
+            return None
+
         splitMark = 0
         if self.isSplit:
             splitMark = 1
@@ -119,7 +122,9 @@ class Quad:
                 if children == None:
                     children = []
 
-                children.append(c.serialize())
+                serobj = c.serialize()
+                if serobj <> None:
+                    children.append(serobj)
 
         return me
 

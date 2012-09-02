@@ -69,13 +69,21 @@ void Quad::MarkDelete()
 {
     _deleteMark = true;
     if(this->IsSplitted())
-    {
+    {	
+#if defined(NO_PARALLEL)
+		int cnt = _quads->size();
+		for(int i=0;i<cnt;++i) {
+			auto q = _quads->at(i);
+			q->MarkDelete();
+		}
+#else
         parallel_for(0,(int)_quads->size(),
             [=](int index)
         {
             Quad* q = _quads->operator[](index);
             q->MarkDelete();
         });
+#endif
     }
 }
 
@@ -143,6 +151,15 @@ void Quad::SplitByCircle( const Circle& c )
 
     bool allDeleted = true;
     _ASSERT(_quads->empty() == false);
+
+#if defined(NO_PARALLEL)
+	int cnt = _quads->size();
+	for(int i=0;i<cnt;++i) {
+		auto q = _quads->at(i);
+		q->SplitByCircle(c);
+		allDeleted = allDeleted && q->IsDeleteMarked();
+	}
+#else
     parallel_for(
         0,
         (int)_quads->size(),
@@ -152,6 +169,7 @@ void Quad::SplitByCircle( const Circle& c )
         q->SplitByCircle(c);
         allDeleted = allDeleted && q->IsDeleteMarked();
     });
+#endif
 
     //
     // All children is deleted.
@@ -171,11 +189,16 @@ void Quad::DeleteAllMarked()
     Quad* pool[MAX_QUADS];
     volatile LONG poolCnt = -1;
 
+#if defined(NO_PARALLEL)
+	int cnt = _quads->size();
+	for(int index=0;index<cnt;++index) {
+#else
     parallel_for(0,
         (int)_quads->size(),
         [=,&poolCnt, &pool](int index)
     {
-        Quad* q = (*this->_quads)[index];
+#endif
+		auto q = _quads->at(index);
         if(q->IsDeleteMarked() == false)
         {
             int index = InterlockedIncrement(&poolCnt);
@@ -187,7 +210,12 @@ void Quad::DeleteAllMarked()
         {
             delete q;
         }
-    });
+    
+#if defined(NO_PARALLEL)
+	}
+#else
+		});
+#endif
 
     // pool count started with 0.
     // so let's increase one.

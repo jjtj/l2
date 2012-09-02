@@ -1,13 +1,24 @@
 ﻿body {
 }
 
-.flexbox-center-center {
+.gamecanvas {
+	position: absolute;
+}
+
+.fullscreen {
 	position: absolute;
 	height: 100%;
 	width: 100%;
+}
 	
+.flexbox-center-center {
 	display: -ms-flexbox;
 	-ms-flex-direction: row;
 	-ms-flex-align: center;
 	-ms-flex-pack: center;
+}
+
+
+#_terrainCanvas {
+	background-color: pink;
 }

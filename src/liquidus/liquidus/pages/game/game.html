@@ -20,10 +20,26 @@
         
     </head>
     <body>
-    	<div class="flexbox-center-center">
-    		<div>
-    			<img src="/pages/game/images/loading.png">
-    		</div>
-    	</div>
+        <div id="_gamescreen" >
+            <div
+                data-bind="visible: isLoaded() === false"
+                class="fullscreen flexbox-center-center">
+                <img src="/pages/game/images/loading.png">
+            </div>
+            <div
+                data-bind="visible: isLoaded"
+				class="fullscreen">
+                GAME START
+            	<canvas 
+					id="_gameCanvas"
+					class="gamecanvas"
+					data-bind="event: { MSPointerDown: mouseDown,
+                                        MSPointerUp: mouseUp,
+                                        MSPointerMove: mouseMove,
+                                        MSPointerOut: mouseCancel,
+                                        MSPointerCancel: mouseCancel}"
+                    ></canvas>
+            </div>
+        </div>
     </body>
 </html>

@@ -4,26 +4,42 @@
     var WorldLoader = WinJS.Class.define(function () {
         
     }, {
-        load:function () {
+        loadAsync:function (ctx) {
             var w = World.loadPink()
               , components = [w]
+              , promises = []
 
-            components.push(this._createWorldTerrain(w));
+            ctx.world = w;
+            ctx.gameCanvas.width = w.dim.w;
+            ctx.gameCanvas.height = window.screen.height;
+            ctx.stage = new createjs.Stage(ctx.gameCanvas)
             
-            return components;
+
+            promises.push(this._loadWorldTerrainAsync(ctx))
+
+            return WinJS.Promise.thenEach(promises,
+                function(v) {
+                    components.push(v);
+                })
+                .then(function () {
+                    return WinJS.Promise.wrap(components);
+                });
         },
         
         /**
-         * Create world terrain
+         * Load world terrain
          * 
          * @param w {World} World data
          *
          */
-        _createWorldTerrain: function (w) {
-            var ter = new App.Class.Terrain();
-
-            ter.load(w.wolrdTerrain);
-            return ter;
+        _loadWorldTerrainAsync: function (ctx) {
+            var ter = new App.Class.Terrain()
+              , w = ctx.world
+              , json = w.wolrdTerrain
+              , canvasSize = [w.dim.w,
+                             window.screen.height]
+            
+            return ter.loadAsync(ctx, canvasSize, json)
         }
     });
 
