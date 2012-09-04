@@ -118,7 +118,8 @@
                     w = v[i + 2]
                     h = v[i + 3]
                     
-                    /*
+                    /* FOR VISUAL DEBUGGING
+                     * ====================
                     r = Math.floor(Math.random() * 45731) % 256
                     g = Math.floor(Math.random() * 93411) % 256
                     b = Math.floor(Math.random() * 17231) % 256
@@ -140,6 +141,11 @@
                 console.log("timeXX: " + diff)
             },
             
+
+            /**
+             *  Update y-offset
+             *
+             */
             updateYOffset: function (newYOffset) {
                 this._renderTerrain(newYOffset)
             }

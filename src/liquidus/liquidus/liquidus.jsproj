@@ -62,7 +62,10 @@
     <Content Include="image\Microsoft.VisualStudio.Blend.Html.Intrinsic.Img.png" />
     <Content Include="js\default.js" />
     <Content Include="js\navigator.js" />
+    <Content Include="js\utils.js" />
     <Content Include="pages\game\game-entity.js" />
+    <Content Include="pages\game\image-entity.js" />
+    <Content Include="pages\game\level-entity.js" />
     <Content Include="pages\game\terrain.js" />
     <Content Include="pages\game\world-loader.js" />
     <Content Include="pages\game\game.css" />
@@ -93,7 +96,7 @@
     <None Include="liquidus_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <SDKReference Include="Microsoft.WinJS.1.0, Version=1.0" />
+    <SDKReference Include="Microsoft.WinJS.1.0.RC, Version=1.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\engine\engine.vcxproj" />
