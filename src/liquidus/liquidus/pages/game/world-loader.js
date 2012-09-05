@@ -16,7 +16,7 @@
             ctx.stage = new createjs.Stage(ctx.gameCanvas)
             
             promises.push(this._loadWorldTerrainAsync(ctx))
-            
+            this._loadLevelAsync(ctx);
             for (var x in w.level) {
                 lvl = w.level[x]
                 this._loadLevelAsync(ctx, lvl)
@@ -60,7 +60,18 @@
          *                  id,x,y,w,h,imgfile
          *
          */
-        _loadLevelAsync: function (ctx, promises, data) {
+        _loadLevelAsync: function (ctx, data) {
+            var cnt = data.level.length
+              , i
+              , lvl
+              , promises = []
+
+            for (i = 0; i < cnt; ++i) {
+                lvl = new LevelEntity()
+                promises.push(lvl.loadAsync(ctx, data.level[i]))
+            }
+
+            return WinJS.Promise.join(promises);
         }
     });
 

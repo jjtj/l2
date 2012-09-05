@@ -18,8 +18,13 @@
         loadAsync: function (ctx,
                             lvlData) {
 
-            this.title = new 
+            var t = lvlData.title
 
+            this.title = new App.Class.ImageEntity();
+            return this.loadAsync(ctx,
+                           t.x, t.y,
+                           t.imgpath,
+                           false);
         }
     });
 
